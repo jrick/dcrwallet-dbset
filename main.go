@@ -59,4 +59,8 @@ func main() {
 	if err != nil {
 		log.Fatalf("update: %v", err)
 	}
+	err = db.Close()
+	if err != nil {
+		log.Fatalf("close: %v", err)
+	}
 }
